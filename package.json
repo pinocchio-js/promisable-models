@@ -4,9 +4,10 @@
   "description": "Backbone models and collections that behaves like promises for Marionette",
   "main": "index.js",
   "scripts": {
+    "clean"   : "rm -f lib/promisable.model.js",
     "install" : "npm install && npm run bower -- install",
-    "clean"   : "rm lib/promisable.model.js",
     "build"   : "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
+    "test"    : "npm run clean && npm run build && npm run karma -- start",
     "karma"   : "./node_modules/karma/bin/karma",
     "bower"   : "bower"
   },

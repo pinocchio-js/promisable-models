@@ -21,7 +21,7 @@ when.join(template, src)
     templateFn = handlebars.compile(template);
     
     build = beautify(templateFn({
-      name: 'Marionette.Promisable',
+      name: 'Marionette.Deferred',
       module: code 
     }));
 

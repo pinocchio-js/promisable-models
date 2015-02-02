@@ -1,6 +1,6 @@
-describe('Entities.Deferred', function() {
+describe('Marionette.Promisable', function() {
   
   it('should pass', function() {
-    debugger
+
   });
 });

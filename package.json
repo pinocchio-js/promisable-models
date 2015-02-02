@@ -6,14 +6,19 @@
   "scripts": {
     "clean": "rm lib/promisable.model.js",
     "build": "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
-
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "karma": "./node_modules/karma/bin/karma"
   },
   "author": "Jean Carlos Meninno",
   "license": "MIT",
   "devDependencies": {
     "handlebars": "^2.0.0",
     "js-beautify": "^1.5.4",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^0.3.1",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "mocha": "^2.1.0",
     "when": "^3.7.2"
   }
 }

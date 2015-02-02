@@ -7,7 +7,7 @@
     "clean"   : "rm -f lib/promisable.model.js",
     "install" : "npm install && npm run bower -- install",
     "build"   : "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
-    "test"    : "npm run clean && npm run build && npm run karma -- start",
+    "test"    : "npm run build && npm run karma -- start",
     "karma"   : "./node_modules/karma/bin/karma",
     "bower"   : "bower"
   },

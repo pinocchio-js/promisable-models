@@ -21,14 +21,14 @@ bower install --save promisable-model
 
 Add the new component to your build after including Marionette, ex.
 
-```
+```html
 <script src="js/backbone.marionette.js"></script>
 <script src="js/promisable.model.js"></script>
 ```
 
 Then you need to register the module in your application
 
-```
+```javascript
 var App = new Marionette.Application();
 // Register the module, in this case entities, the name is just an example,
 // it can have anything that makes sense inside your application

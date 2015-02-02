@@ -16,6 +16,10 @@ module.exports = function(config) {
     ],
 
     files: [
+      'vendor/jquery/dist/jquery.js',
+      'vendor/underscore/underscore.js',
+      'vendor/backbone/backbone.js',
+      'vendor/marionette/lib/backbone.marionette.js',
       'lib/promisable.model.js',
       'test/**/*_spec.js'
     ],

@@ -1,0 +1,30 @@
+{
+  "name": "promisable-models",
+  "version": "1.0.0",
+  "homepage": "https://github.com/pinocchio-js/promisable-models",
+  "authors": [
+    "Jean Carlos Meninno <jean-carlos.meninno@xing.com>"
+  ],
+  "description": "Backbone models and collections that behaves like promises for Marionette",
+  "main": "lib/promisable-model.js",
+  "keywords": [
+    "Backbone",
+    "Marionette",
+    "Model",
+    "Collection",
+    "Promise",
+    "Futures"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "marionette": "~2.3.2"
+  }
+}

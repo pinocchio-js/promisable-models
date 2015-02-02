@@ -22,7 +22,6 @@ bower install --save promisable-model
 Add the new component to your build after including Marionette, ex.
 
 ```
-...
 <script src="js/backbone.marionette.js"></script>
 <script src="js/promisable.model.js"></script>
 ```
@@ -34,9 +33,8 @@ var App = new Marionette.Application();
 // Register the module, in this case entities, the name is just an example,
 // it can have anything that makes sense inside your application
 App.module('Entities', Pinocchio.Promisable);
-
+// Later somewhere in your app
 App.start();
-
 ```
 
 ### The Mixing

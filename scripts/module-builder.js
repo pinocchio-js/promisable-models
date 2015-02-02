@@ -22,8 +22,11 @@ when.join(template, src)
     
     build = beautify(templateFn({
       name: 'Marionette.Deferred',
-      module: code 
-    }));
+      module: code
+    }), {
+      indent_size: 2,
+      indent_char: " "
+    });
 
     process.stdout.write(build);
   });

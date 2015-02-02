@@ -1,0 +1,19 @@
+{
+  "name": "promisable-models",
+  "version": "1.0.0",
+  "description": "Backbone models and collections that behaves like promises for Marionette",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm lib/promisable.model.js",
+    "build": "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jean Carlos Meninno",
+  "license": "MIT",
+  "devDependencies": {
+    "handlebars": "^2.0.0",
+    "js-beautify": "^1.5.4",
+    "when": "^3.7.2"
+  }
+}

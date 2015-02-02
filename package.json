@@ -7,10 +7,12 @@
     "clean": "rm lib/promisable.model.js",
     "build": "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
     "karma": "./node_modules/karma/bin/karma"
+    "bower": "bower"
   },
   "author": "Jean Carlos Meninno",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.3.12",
     "handlebars": "^2.0.0",
     "js-beautify": "^1.5.4",
     "karma": "^0.12.31",

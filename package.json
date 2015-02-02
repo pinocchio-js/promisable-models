@@ -4,10 +4,11 @@
   "description": "Backbone models and collections that behaves like promises for Marionette",
   "main": "index.js",
   "scripts": {
-    "clean": "rm lib/promisable.model.js",
-    "build": "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
-    "karma": "./node_modules/karma/bin/karma"
-    "bower": "bower"
+    "install" : "npm install && npm run bower -- install",
+    "clean"   : "rm lib/promisable.model.js",
+    "build"   : "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
+    "karma"   : "./node_modules/karma/bin/karma",
+    "bower"   : "bower"
   },
   "author": "Jean Carlos Meninno",
   "license": "MIT",

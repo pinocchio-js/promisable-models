@@ -1,4 +1,4 @@
-initializeDeferred = function() {
+Module.Promisable = function() {
   this._deferred = jQuery.Deferred();
 
   this.listenTo(this, 'sync', function(){
@@ -35,8 +35,4 @@ initializeDeferred = function() {
 
     return xhr;
   }
-}
-  
-Module.Deferred = function() {
-  initializeDeferred.call(this);
 }

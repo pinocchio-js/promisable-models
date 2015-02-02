@@ -21,8 +21,9 @@ when.join(template, src)
     templateFn = handlebars.compile(template);
     
     build = beautify(templateFn({
-      name: 'Marionette.Deferred',
-      module: code
+      namespace: 'Pinocchio',
+      module: 'Promisable',
+      src: code
     }), {
       indent_size: 2,
       indent_char: " "

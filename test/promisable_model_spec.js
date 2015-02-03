@@ -28,4 +28,23 @@ describe('Marionette.Promisable', function() {
     });
   });
 
+  describe('isResolved', function() {
+    var promisedModel = new TestModel();
+
+    describe('when initialized', function() {
+
+      it('returns false', function() {
+        expect(promisedModel.isResolved()).to.not.be.true;
+      });
+    });
+
+    describe('when resolved', function() {
+      it('returns true', function() {
+        promisedModel._deferred.resolve();
+
+        expect(promisedModel.isResolved()).to.be.true;
+      });
+    });
+  });
+
 });

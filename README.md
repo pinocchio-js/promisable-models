@@ -4,12 +4,12 @@ This is a module for Marionette's Applications. That allow Backbone's models and
 
 ## Documentation Index
 
-- Installation
-- The Mixin
-- Promisable.Model
-- Promisable.Model.Static
-- Promisable.Collection
-- Promisable.Collection.Static
+* [Installation](#instalation)
+* [Promisable.Mixin](#promisable-mixin)
+* [Promisable.Model](#promisable-model)
+* [Promisable.Collection](#promisable-collection)
+* [Promisable.Model.Static](#promisable-model-static)
+* [Promisable.Collection.Static](#promisable-collection-static)
 
 ### Installation
 
@@ -37,4 +37,12 @@ App.module('Entities', Pinocchio.Promisable);
 App.start();
 ```
 
-### The Mixing
+### Promisable.Mixin
+
+### Promisable.Model
+
+### Promisable.Collection
+
+### Promisable.Model.Static
+
+### Promisable.Collection.Static

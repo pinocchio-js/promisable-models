@@ -1,18 +1,12 @@
 module.exports = function(config) {
   config.set({
 
-    plugins: [
-      'karma-chrome-launcher',
-      'karma-phantomjs-launcher',
-      'karma-mocha',
-      'karma-mocha-reporter'
-    ],
-    
     basePath: '',
     port: 9876,
     
     frameworks: [
-      'mocha'
+      'mocha',
+      'chai-sinon'
     ],
 
     files: [

@@ -1,4 +1,4 @@
-describe('Marionette.Promisable', function() {
+describe('Pinocchio.Promisable', function() {
   
   var App = new Marionette.Application();
   App.module('Entities', Pinocchio.Promisable);

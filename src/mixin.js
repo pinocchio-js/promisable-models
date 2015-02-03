@@ -35,4 +35,4 @@ Module.Mixin = function() {
 
     return xhr;
   }
-}
+};

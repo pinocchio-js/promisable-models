@@ -5,11 +5,11 @@ This is a module for Marionette's Applications. That allow Backbone's models and
 ## Documentation Index
 
 * [Installation](#instalation)
-* [Promisable.Mixin](#promisable-mixin)
-* [Promisable.Model](#promisable-model)
-* [Promisable.Collection](#promisable-collection)
-* [Promisable.Model.Static](#promisable-model-static)
-* [Promisable.Collection.Static](#promisable-collection-static)
+* [Promisable.Mixin](#promisablemixin)
+* [Promisable.Model](#promisablemodel)
+* [Promisable.Collection](#promisablecollection)
+* [Promisable.Model.Static](#promisablemodelstatic)
+* [Promisable.Collection.Static](#promisablecollectionstatic)
 
 ### Installation
 

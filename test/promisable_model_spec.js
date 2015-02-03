@@ -18,6 +18,14 @@ describe('Marionette.Promisable', function() {
     it('responds to done', function() {
       expect(promisedModel.done).to.be.ok();
     });
+
+    it('responds to fail', function() {
+      expect(promisedModel.fail).to.be.ok();
+    });
+
+    it('responds to then', function() {
+      expect(promisedModel.then).to.be.ok();
+    });
   });
 
 });

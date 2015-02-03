@@ -1,15 +1,12 @@
 var {{namespace}} = {{namespace}} || {};
 
 {{namespace}}.{{module}} = Marionette.Module.extend({
-  startWithParent: false,
+  startWithParent: true,
 
-  initialize: function(options, Module, App) {
+  initialize: function() {
+    this.{{module}} = {};
+    var Module = this.{{module}};
+
     {{{src}}}
-  },
-
-  onStart: function(options) {
-  },
-
-  onStop: function(options) {
-  },
+  }
 });

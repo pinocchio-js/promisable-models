@@ -1,4 +1,4 @@
-Module.Promisable = function() {
+Module.Mixin = function() {
   this._deferred = jQuery.Deferred();
 
   this.listenTo(this, 'sync', function(){

@@ -34,7 +34,7 @@ describe('Marionette.Promisable', function() {
     describe('when initialized', function() {
 
       it('returns false', function() {
-        expect(promisedModel.isResolved()).to.not.be.true;
+        expect(promisedModel.isResolved()).to.not.be.true();
       });
     });
 
@@ -42,7 +42,7 @@ describe('Marionette.Promisable', function() {
       it('returns true', function() {
         promisedModel._deferred.resolve();
 
-        expect(promisedModel.isResolved()).to.be.true;
+        expect(promisedModel.isResolved()).to.be.true();
       });
     });
   });

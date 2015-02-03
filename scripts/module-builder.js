@@ -27,11 +27,11 @@ when.join(template, mixin, model, collection)
     templateFn = handlebars.compile(template);
     
     build = beautify(templateFn({
-      namespace  : 'Pinocchio',
-      module     : 'Promisable',
-      mixin      : mixin,
-      model      : model,
-      collection : collection
+      globalNamespace : 'Pinocchio',
+      namespace       : 'Promisable',
+      mixin           : mixin,
+      model           : model,
+      collection      : collection
     }), {
       indent_size: 2,
       indent_char: " "

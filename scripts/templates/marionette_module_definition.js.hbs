@@ -1,14 +1,13 @@
-var {{namespace}} = {{namespace}} || {};
+var {{globalNamespace}} = {{globalNamespace}} || {};
 
-{{namespace}}.{{module}} = Marionette.Module.extend({
-  startWithParent: true,
+{{globalNamespace}}.{{namespace}} = function(module, app, Backbone, Marionette, $, _) {
+  this.startWithParent = true;
 
-  initialize: function() {
-    this.{{module}} = {};
-    var Module = this.{{module}};
+  var Module = {};
 
-    {{{mixin}}}
-    {{{model}}}
-    {{{collection}}}
-  }
-});
+  {{{mixin}}}
+  {{{model}}}
+  {{{collection}}}
+
+  module['{{namespace}}'] = Module;
+};

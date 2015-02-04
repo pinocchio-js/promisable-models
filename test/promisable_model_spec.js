@@ -88,17 +88,18 @@ describe('Pinocchio.Promisable', function() {
   });
 
   describe('when fetched', function() {
-    var sinonServer = sinon.fakeServer.create(),
-        promisedModel = new TestModel(),
+    var promisedModel = new TestModel(),
         originalPromise,
+        sinonServer,
         newPromise;
 
     beforeEach(function() {
-      sinonServer.respondWith("GET", /test/, [
-        200, {
-          "Content-Type": "application/json"
-        }, '{}'
-      ]);
+      sinonServer = sinon.fakeServer.create();
+      sinonServer.respondWith("GET", "/test", [200, {"Content-Type": "application/json"}, '{}']);
+    });
+
+    afterEach(function() {
+      sinonServer.restore();
     });
 
     it('creates a new promise', function() {
@@ -121,16 +122,16 @@ describe('Pinocchio.Promisable', function() {
   });
 
   describe('abort request', function() {
-    var sinonServer = sinon.fakeServer.create(),
-        promisedModel = null;
+    var promisedModel, sinonServer;
 
     beforeEach(function() {
-      sinonServer.respondWith('GET', /test/, [
-        200, {
-          'Content-Type': 'application/json'
-        }, '{}'
-      ]);
       promisedModel = new TestModel();
+      sinonServer = sinon.fakeServer.create();
+      sinonServer.respondWith("GET", "/test", [200, {"Content-Type": "application/json"}, '{}']);
+    });
+
+    afterEach(function() {
+      sinonServer.restore();
     });
 
     it('creates the method abort after fetch', function() {
@@ -145,7 +146,7 @@ describe('Pinocchio.Promisable', function() {
           spy = sinon.spy(xhr, 'abort');
 
       promisedModel.abort();
-      expect(spy.calledWith('manual abort'));
+      expect(spy).to.have.been.called;
 
       xhr.abort.restore();
     });

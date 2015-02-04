@@ -8,7 +8,7 @@
     "build"        : "npm run build:lib && npm run build:minify",
     "build:lib"    : "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
     "build:minify" : "npm run uglifyjs -- lib/promisable.model.js -m sort -o lib/promisable.model.min.js",
-    "test"         : "npm run build:lib && npm run karma -- start",
+    "test"         : "npm run build && npm run karma -- start",
     "bower"        : "bower",
     "karma"        : "./node_modules/karma/bin/karma",
     "uglifyjs"     : "uglifyjs"

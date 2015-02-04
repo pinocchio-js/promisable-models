@@ -25,6 +25,7 @@ Module.Mixin = function() {
 
   var oldFetch = this.fetch;
   this.fetch = function() {
+    this._deferred = jQuery.Deferred();
     var xhr = oldFetch.apply(this, arguments);
 
     this.abort = function() {
@@ -34,5 +35,5 @@ Module.Mixin = function() {
     };
 
     return xhr;
-  }
+  };
 };

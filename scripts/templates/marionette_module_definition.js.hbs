@@ -5,9 +5,11 @@ var {{globalNamespace}} = {{globalNamespace}} || {};
 
   var Module = {};
 
-  {{{mixin}}}
-  {{{model}}}
-  {{{collection}}}
+  {{> 'mixin.js'}}
+
+  {{> 'model.js'}}
+
+  {{> 'collection.js'}}
 
   module['{{namespace}}'] = Module;
 };

@@ -16,7 +16,6 @@
     "bower": "^1.3.12",
     "chai": "^1.10.0",
     "handlebars": "^2.0.0",
-    "js-beautify": "^1.5.4",
     "karma": "^0.12.31",
     "karma-chai-sinon": "^0.1.4",
     "karma-chrome-launcher": "^0.1.7",
@@ -26,6 +25,8 @@
     "mocha": "^2.1.0",
     "sinon": "^1.12.2",
     "sinon-chai": "^2.6.0",
-    "when": "^3.7.2"
+    "streamqueue": "^0.1.1",
+    "through2": "^0.6.3",
+    "vinyl-fs": "^0.3.13"
   }
 }

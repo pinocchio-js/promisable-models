@@ -4,11 +4,14 @@
   "description": "Backbone models and collections that behaves like promises for Marionette",
   "main": "lib/promisable.model.js",
   "scripts": {
-    "clean" : "rm -f lib/promisable.model.js",
-    "build" : "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
-    "test"  : "npm run build && npm run karma -- start",
-    "karma" : "./node_modules/karma/bin/karma",
-    "bower" : "bower"
+    "clean"        : "rm -f lib/*.js",
+    "build"        : "npm run build:lib && npm run build:minify",
+    "build:lib"    : "npm run clean && node scripts/module-builder >> lib/promisable.model.js",
+    "build:minify" : "npm run uglifyjs -- lib/promisable.model.js -m sort -o lib/promisable.model.min.js",
+    "test"         : "npm run build:lib && npm run karma -- start",
+    "bower"        : "bower",
+    "karma"        : "./node_modules/karma/bin/karma",
+    "uglifyjs"     : "uglifyjs"
   },
   "author": "Jean Carlos Meninno",
   "license": "MIT",
@@ -30,6 +33,7 @@
     "sinon-chai": "^2.6.0",
     "streamqueue": "^0.1.1",
     "through2": "^0.6.3",
+    "uglify-js": "^2.4.16",
     "vinyl-fs": "^0.3.13"
   }
 }

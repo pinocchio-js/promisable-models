@@ -67,9 +67,8 @@ var person = new App.Entities.Promisable.Model({id: 5});
 
 person.fetch();
 person.done(function() {
-  // Use your filled here
+  // Use your complete model here
 });
-
 ```
 
 ### Pomisable.Model.Static
@@ -78,13 +77,42 @@ person.done(function() {
 var person = new App.Entities.Promisable.Model.Static({id: 5, name: 'jane'});
 
 person.done(function() {
-  //Use your filled here
+  //Use your complete model here
 });
 ```
 
 ## Collections
 
 ### Promisable.Collection
+
+```js
+// Asumes that the module was added in App.Entities
+var todos = new App.Entities.Promisable.Collection();
+
+todos.fetch();
+todos.done(function() {
+  // Use your complete collection here
+});
+```
 ### Promisable.Collection.Static
 
+```js
+// Asumes that the module was added in App.Entities
+var todos = new App.Entities.Promisable.Collection.Static([
+  {id: 25, description: 'do the laundry'},
+  {id: 33, description: 'buy groseries'}
+]);
+
+todos.done(function() {
+  // Use your complete collection here
+});
+```
 ## Mixin
+
+var MyAwesomeModel = Backbone.Model.extend({
+  constructor: function() {
+    Backbone.Mode.apply(this, arguments);
+    // Asumes that the module was added in App.Entities
+    App.Entities.Promisable.Mixin.apply(this);
+  }
+});

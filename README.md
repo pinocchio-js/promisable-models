@@ -7,8 +7,8 @@ Example:
 // Asumes that the module was added in App.Entities
 var person = new App.Entities.Promisable.Model({id: 5});
 
-model.fetch();
-$.when(model, function() {
+person.fetch();
+$.when(person, function() {
   // do something with your initialized model	
 });
 ```
@@ -18,9 +18,9 @@ The module also includes a static version of both models and collection, which w
 Example
 ```js
 // Asumes that the module was added in App.Entities
-var person = new App.Entities.Promisable.Model.Static({id: 5, name: 'jhon'});
+var person = new App.Entities.Promisable.Model.Static({id: 5, name: 'john'});
 
-$.when(model, function() {
+$.when(person, function() {
   // do something with your initialized model 
 });
 ```

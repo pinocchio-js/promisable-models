@@ -109,6 +109,7 @@ todos.done(function() {
 ```
 ## Mixin
 
+```js
 var MyAwesomeModel = Backbone.Model.extend({
   constructor: function() {
     Backbone.Mode.apply(this, arguments);
@@ -116,3 +117,4 @@ var MyAwesomeModel = Backbone.Model.extend({
     App.Entities.Promisable.Mixin.apply(this);
   }
 });
+```

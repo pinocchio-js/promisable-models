@@ -54,6 +54,7 @@ App.start();
 # Usuage
 
 There are two ways of using this module
+
 1. Using the provided models and collection
 2. Using the provided mixin so you can get the same benefits in other places
 

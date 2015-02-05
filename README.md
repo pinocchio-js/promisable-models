@@ -1,27 +1,39 @@
 # Promisable Models
 
-Models and Collections are a big part of every Backbone/Marionette applications, this Marionette's module allows models and collections to behave as they were jQuery promises, thus eliminating the need to keep track of your xhr object returned from the ajax call.
+Models and Collections are a big part of every Backbone/Marionette application. This Marionette module allows Models and Collections to behave as jQuery Promises, thus eliminating the need to keep track of the XHR object returned from the ajax call.
 
-Example:
+Promisable Models can be used for example to show a "loading" message while the models/collections fetch remote data.
+
 ```js
 // Asumes that the module was added in App.Entities
-var person = new App.Entities.Promisable.Model({id: 5});
+var person      = new App.Entities.Promisable.Model({id: 5}),
+    loadingView = new MyLoadingView(),
+    personView;
+
+// Show template with "Loading" message
+$('.container').html(loadingView.render().el);
 
 person.fetch();
-$.when(person, function() {
-  // do something with your initialized model	
+person.done(function() {
+  personView = new PersonView({
+    model: person
+  });
+  $('.container').html(personView.render().el)
 });
 ```
 
 The module also includes a static version of both models and collection, which will be resolved by default.
 
-Example
 ```js
 // Asumes that the module was added in App.Entities
-var person = new App.Entities.Promisable.Model.Static({id: 5, name: 'john'});
+var person = new App.Entities.Promisable.Model.Static({id: 5, name: 'john'}),
+    personView;
 
-$.when(person, function() {
-  // do something with your initialized model 
+person.done(function() {
+  personView = new PersonView({
+    model: person
+  });
+  $('.container').html(personView.render().el)
 });
 ```
 
@@ -30,10 +42,10 @@ $.when(person, function() {
 Get a copy of the current version of the module using Bower
 
 ```
-bower install --save promisable-model
+bower install --save promisable-models
 ```
 
-Add the new component to your build after including Marionette, ex.
+Add the new component to your build after including Marionette.
 
 ```html
 <script src="js/backbone.marionette.js"></script>
@@ -51,12 +63,12 @@ App.module('Entities', Pinocchio.Promisable);
 App.start();
 ```
 
-# Usuage
+# Usage
 
 There are two ways of using this module
 
-1. Using the provided models and collection
-2. Using the provided mixin so you can get the same benefits in other places
+1. Using the provided `Promisable.Model` and `Promisable.Collection` when creating your models and collections.
+2. Using the provided `Promisable.Mixin` to mix-in the functionalities into other classes.
 
 ## Models
 
@@ -108,12 +120,13 @@ todos.done(function() {
   // Use your complete collection here
 });
 ```
+
 ## Mixin
 
 ```js
 var MyAwesomeModel = Backbone.Model.extend({
   constructor: function() {
-    Backbone.Mode.apply(this, arguments);
+    Backbone.Model.apply(this, arguments);
     // Asumes that the module was added in App.Entities
     App.Entities.Promisable.Mixin.apply(this);
   }
@@ -122,4 +135,4 @@ var MyAwesomeModel = Backbone.Model.extend({
 
 # Licence
 
-MIT
+Promisable Modules is distributed under [MIT license](http://mutedsolutions.mit-license.org/).

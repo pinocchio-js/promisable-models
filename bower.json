@@ -1,12 +1,16 @@
 {
   "name": "promisable-models",
   "version": "1.0.0",
+  "description": "Promisable Models is a mixin for Backbone Models and Collection that allow them to behave as jQuery Promises",
+  "main": "lib/promisable.model.js",
   "homepage": "https://github.com/pinocchio-js/promisable-models",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pinocchio-js/promisable-models.git"
+  },
   "authors": [
     "Jean Carlos Meninno <jean-carlos.meninno@xing.com>"
   ],
-  "description": "Backbone models and collections that behaves like promises for Marionette",
-  "main": "lib/promisable-model.js",
   "keywords": [
     "Backbone",
     "Marionette",
@@ -19,10 +23,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "app/bower_components",
-    "test",
-    "tests"
+    "test"
   ],
   "dependencies": {
     "marionette": "~2.3.2"

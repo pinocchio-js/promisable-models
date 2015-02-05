@@ -1,7 +1,7 @@
 {
   "name": "promisable-models",
   "version": "1.0.0",
-  "description": "Backbone models and collections that behaves like promises for Marionette",
+  "description": "Promisable Models is a mixin for Backbone Models and Collection that allow them to behave as jQuery Promises",
   "main": "lib/promisable.model.js",
   "scripts": {
     "clean"        : "rm -f lib/*.js",

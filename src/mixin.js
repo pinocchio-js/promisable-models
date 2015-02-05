@@ -10,9 +10,17 @@ Module.Mixin = function() {
   });
 
   // Proxy Promises methods
-  this.done = this._deferred.done;
-  this.fail = this._deferred.fail;
-  this.then = this._deferred.then;
+  this.done = function() {
+    return this._deferred.done.apply(this._deferred, arguments);
+  };
+
+  this.fail = function() {
+    return this._deferred.fail.apply(this._deferred, arguments);
+  };
+
+  this.then = function() {
+    return this._deferred.then.apply(this._deferred, arguments);
+  };
 
   // Helper Methods for handling promises
   this.isResolved = function() {

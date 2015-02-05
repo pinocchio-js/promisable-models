@@ -118,3 +118,7 @@ var MyAwesomeModel = Backbone.Model.extend({
   }
 });
 ```
+
+# Licence
+
+MIT

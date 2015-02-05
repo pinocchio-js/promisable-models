@@ -1,17 +1,31 @@
 # Promisable Models
 
-This is a module for Marionette's Applications. That allow Backbone's models and collection to behave as it was a jQuery promise.
+Models and Collections are a big part of every Backbone/Marionette applications, this Marionette's module allows models and collections to behave as they were jQuery promises, thus eliminating the need to keep track of your xhr object returned from the ajax call.
 
-## Documentation Index
+Example:
+```js
+// Asumes that the module was added in App.Entities
+var person = new App.Entities.Promisable.Model({id: 5});
 
-* [Installation](#instalation)
-* [Promisable.Mixin](#promisablemixin)
-* [Promisable.Model](#promisablemodel)
-* [Promisable.Collection](#promisablecollection)
-* [Promisable.Model.Static](#promisablemodelstatic)
-* [Promisable.Collection.Static](#promisablecollectionstatic)
+model.fetch();
+$.when(model, function() {
+  // do something with your initialized model	
+});
+```
 
-### Installation
+The module also includes a static version of both models and collection, which will be resolved by default.
+
+Example
+```js
+// Asumes that the module was added in App.Entities
+var person = new App.Entities.Promisable.Model.Static({id: 5, name: 'jhon'});
+
+$.when(model, function() {
+  // do something with your initialized model 
+});
+```
+
+# Installation
 
 Get a copy of the current version of the module using Bower
 
@@ -28,7 +42,7 @@ Add the new component to your build after including Marionette, ex.
 
 Then you need to register the module in your application
 
-```javascript
+```js
 var App = new Marionette.Application();
 // Register the module, in this case entities, the name is just an example,
 // it can have anything that makes sense inside your application
@@ -37,12 +51,40 @@ App.module('Entities', Pinocchio.Promisable);
 App.start();
 ```
 
-### Promisable.Mixin
+# Usuage
+
+There are two ways of using this module
+1. Using the provided models and collection
+2. Using the provided mixin so you can get the same benefits in other places
+
+## Models
 
 ### Promisable.Model
 
+```js
+// Asumes that the module was added in App.Entities
+var person = new App.Entities.Promisable.Model({id: 5});
+
+person.fetch();
+person.done(function() {
+  // Use your filled here
+});
+
+```
+
+### Pomisable.Model.Static
+```js
+// Asumes that the module was added in App.Entities
+var person = new App.Entities.Promisable.Model.Static({id: 5, name: 'jane'});
+
+person.done(function() {
+  //Use your filled here
+});
+```
+
+## Collections
+
 ### Promisable.Collection
-
-### Promisable.Model.Static
-
 ### Promisable.Collection.Static
+
+## Mixin

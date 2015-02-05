@@ -1,6 +1,6 @@
 {
   "name": "promisable-models",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Promisable Models is a mixin for Backbone Models and Collection that allow them to behave as jQuery Promises",
   "main": "lib/promisable.model.js",
   "scripts": {
